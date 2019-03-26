@@ -54,6 +54,7 @@
 				<string>CYTExtendViewModel</string>
 				<string>FFBasicViewController</string>
 				<string>FFBasicControllerView</string>
+				<string>FFBasicModel</string>
 			</array>
 			<key>Suffixes</key>
 			<dict>
@@ -67,6 +68,8 @@
 				<string>Controller</string>
 				<key>FFBasicControllerView</key>
 				<string>View</string>
+				<key>FFBasicModel</key>
+				<string>Model</string>
 			</dict>
 		</dict>
 		<dict>

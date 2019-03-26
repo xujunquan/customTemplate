@@ -11,11 +11,10 @@
 @synthesize ffContentView = _ffContentView;
 
 #pragma mark- flow control
-- (void)ffc_initBeforeViewLoad {
-    [super ffc_initBeforeViewLoad];
+- (void)ffc_init {
+    [super ffc_init];
 
     self.showNavigationView = YES;
-
 }
 
 - (void)ffc_initAfterViewLoad {

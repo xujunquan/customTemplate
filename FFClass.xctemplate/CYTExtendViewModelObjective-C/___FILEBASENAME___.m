@@ -29,14 +29,17 @@
 #pragma mark- get
 - (RACCommand *)requestCommand {
     if (!_requestCommand) {
+        @weakify(self);
         _requestCommand = [self commandWithRequestModel:^FFBasicNetworkRequestModel *{
+            @strongify(self);
             FFBasicNetworkRequestModel *model = [FFBasicNetworkRequestModel new];
             model.needHud = YES;
-            model.methodType = NetRequestMethodTypeGet;
+            model.methodType = FFNetRequestMethodTypeGet;
             model.requestURL = nil;
             model.requestParameters = nil;
             return model;
         } andHandle:^(FFBasicNetworkResponseModel *resultModel) {
+            @strongify(self);
             [self handleResponseModel:resultModel];
         }];
     }
